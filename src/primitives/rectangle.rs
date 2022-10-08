@@ -32,7 +32,6 @@ impl Rectangle {
 impl Rectangle {
     pub fn is_in_bounding_box(&self, x: i32, y: i32) -> bool {
         let data = self.matrix.view * self.matrix.model;
-        println!("{},{},{:?}", x, y, data);
         if x >= data.x as i32
             && x as f32 <= data.x as f32 + self.width as f32
             && y >= data.y as i32
